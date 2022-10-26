@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "cypress": "^10.10.0"
+  },
+  "name": "automation-cypress10-qa",
+  "description": "Proyecto de pruebas automatizadas con Cypress 10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natacorrea5893/automation-cypress10-qa.git"
+  },
+  "keywords": [
+    "javascript",
+    "testing",
+    "cypress"
+  ],
+  "author": "Natanael Correa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natacorrea5893/automation-cypress10-qa/issues"
+  },
+  "homepage": "https://github.com/natacorrea5893/automation-cypress10-qa#readme"
+}
