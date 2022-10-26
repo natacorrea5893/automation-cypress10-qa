@@ -1,12 +1,15 @@
 {
   "dependencies": {
-    "cypress": "^10.10.0"
+    "ajv": "^8.11.0",
+    "cypress": "^10.10.0",
+    "cypress-grep": "^2.6.1",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-real-events": "^1.7.2"
   },
   "name": "automation-cypress10-qa",
   "description": "Proyecto de pruebas automatizadas con Cypress 10",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "run"
   },
