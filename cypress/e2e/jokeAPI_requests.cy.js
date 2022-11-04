@@ -7,11 +7,23 @@ context('JokeAPI Requests', () => {
 
   // Manage HTTP requests in your app
 
-  it('GET action in JokeAPI', () => {
+  it('GET Any joke in JokeAPI', () => {
     // https://on.cypress.io/request
-    cy.request('https://jsonplaceholder.cypress.io/comments')
+    cy.request('https://v2.jokeapi.dev/joke/Any?lang=es')
       .should((response) => {
         expect(response.status).to.eq(200)
+        cy.log(JSON.stringify(response))
+        cy.writeFile('cypress/fixtures/anyJoke.json', response.body)
+      })
+  })
+
+  it('GET Programming joke in JokeAPI', () => {
+    // https://on.cypress.io/request
+    cy.request('https://v2.jokeapi.dev/joke/Programming?lang=es')
+      .should((response) => {
+        expect(response.status).to.eq(200)
+        cy.log(JSON.stringify(response))
+        cy.writeFile('cypress/fixtures/programmingJoke.json', response.body)
       })
   })
 
