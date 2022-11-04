@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cypress open --e2e",
-    "cypress:run:service:api": "npx cypress run --env grepTags=@service+@JokeAPI -s cypress/e2e/*.cy.js"
+    "cypress:run:service:api": "npx cypress run --env grepTags=@service+@JokeAPI -s cypress/e2e/jokeAPI_requests.cy.js"
   },
   "repository": {
     "type": "git",
