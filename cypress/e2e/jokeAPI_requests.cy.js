@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+
 context('JokeAPI Requests', () => {
   beforeEach(() => {
     cy.visit('https://v2.jokeapi.dev/')
@@ -7,7 +8,7 @@ context('JokeAPI Requests', () => {
 
   // Manage HTTP requests in your app
 
-  it('GET Any joke in JokeAPI', () => {
+  it('GET Any joke in JokeAPI', {tags: ['@service', '@JokeAPI']}, () => {
     // https://on.cypress.io/request
     cy.request('https://v2.jokeapi.dev/joke/Any?lang=es')
       .should((response) => {
@@ -17,7 +18,7 @@ context('JokeAPI Requests', () => {
       })
   })
 
-  it('GET Programming joke in JokeAPI', () => {
+  it('GET Programming joke in JokeAPI', {tags: ['@service', '@JokeAPI']}, () => {
     // https://on.cypress.io/request
     cy.request('https://v2.jokeapi.dev/joke/Programming?lang=es')
       .should((response) => {

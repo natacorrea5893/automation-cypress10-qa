@@ -11,7 +11,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open --e2e"
+    "start": "cypress open --e2e",
+    "cypress:run:service:api": "npx cypress run --env grepTags=@service+@JokeAPI -s cypress/e2e/*.cy.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/natacorrea5893/automation-cypress10-qa/issues"
   },
-  "homepage": "https://github.com/natacorrea5893/automation-cypress10-qa#readme"
+  "homepage": "https://github.com/natacorrea5893/automation-cypress10-qa#readme",
+  "devDependencies": {
+    "@cypress/grep": "^3.1.0"
+  }
 }
