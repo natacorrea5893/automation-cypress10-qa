@@ -39,6 +39,19 @@ Para abrir la interfaz de Cypress (E2E):
 npm start
 ```
 
+Para generar los reportes HTML.
+
+Primero:
+```bash
+npm run report
+```
+Finalmente:
+```bash
+npm run html-report
+```
+
+Los reportes se generarán en la carpeta: _./mochawesome-report/cypress/reports/html/.jsons/_
+
 ## Detalles
 
 **Autor**:

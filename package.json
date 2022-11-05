@@ -11,10 +11,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cypress open --e2e",
+    "start": "cypress open --e2e --browser chrome",
     "cypress:run:service:api": "npx cypress run --env grepTags=@service+@JokeAPI -s cypress/e2e/jokeAPI_requests.cy.js",
     "cypress:run:visual": "npx cypress run --env grepTags=@visual -s cypress/e2e/visualTesting.cy.js",
-    "cypress:run:all": "npx cypress run --env -s cypress/e2e/*.cy.js"
+    "cypress:run:all": "npx cypress run --env -s cypress/e2e/*.cy.js",
+    "report": "cypress run --spec cypress/e2e/visualTesting.cy.js --browser chrome --headed",
+    "html-report": "npx marge cypress/reports/html/.jsons/mochawesome.json"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
   },
   "homepage": "https://github.com/natacorrea5893/automation-cypress10-qa#readme",
   "devDependencies": {
-    "@cypress/grep": "^3.1.0"
+    "@cypress/grep": "^3.1.0",
+    "mochawesome": "^7.1.3"
   }
 }
